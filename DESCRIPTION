@@ -2,7 +2,7 @@ Package: PLMIX
 Type: Package
 Title: Bayesian Analysis of Finite Mixture of Plackett-Luce Models
 Version: 2.1.2
-Date: 2020-11-28
+Date: 2020-11-29
 Authors@R: c(person("Cristina", "Mollica", role = c("aut", "cre"), email = "cristina.mollica@uniroma1.it"), person("Luca", "Tardella", role = "aut",email = "luca.tardella@uniroma1.it"))
 Description: Fit finite mixtures of Plackett-Luce models for partial top rankings/orderings within the Bayesian framework. It provides MAP point estimates via EM algorithm and posterior MCMC simulations via Gibbs Sampling. It also fits MLE as a special case of the noninformative Bayesian analysis with vague priors. In addition to inferential techniques, the package assists other fundamental phases of a model-based analysis for partial rankings/orderings, by including functions for data manipulation, simulation, descriptive summary, model selection and goodness-of-fit evaluation. Main references on the methods are Mollica and Tardella (2017) <doi.org/10.1007/s11336-016-9530-0> and Mollica and Tardella (2014) <doi/10.1002/sim.6224>.
 Maintainer: Cristina Mollica <cristina.mollica@uniroma1.it>
