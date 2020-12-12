@@ -13,32 +13,23 @@
 #' @param n_burn Number of initial burn-in drawings removed from the returned MCMC sample.
 #' @param hyper List of named objects with hyperparameter values for the conjugate prior specification: \code{shape0} is a numeric \eqn{G}\eqn{\times}{x}\eqn{K} matrix of shape hyperparameters; \code{rate0} is a numeric vector of \eqn{G} rate hyperparameters; \code{alpha0} is a numeric vector of \eqn{G} Dirichlet hyperparameters. Default is vague prior setting.
 #' @param centered_start Logical: whether a random start whose support parameters and weights should be centered around the observed relative frequency that each item has been ranked top. Default is \code{FALSE}. Ignored when \code{init} is not \code{NULL}.
+=======
+#' gibbsPLMIX_with_norm
 #'
-#' @return A list of S3 class \code{gsPLMIX} with named elements:
-#' 
-#'  \item{\code{W}}{ Numeric \eqn{L}\eqn{\times}{x}\eqn{G} matrix with MCMC samples of the mixture weights.}
-#'  \item{\code{P}}{ Numeric \eqn{L}\eqn{\times}{x}\eqn{(G*K)} matrix with MCMC samples of the component-specific support parameters.}
-#'  \item{\code{log_lik}}{ Numeric vector of \eqn{L} posterior log-likelihood values.}
-#'  \item{\code{deviance}}{ Numeric vector of \eqn{L} posterior deviance values (\eqn{-2 * }\code{log_lik}).}
-#'  \item{\code{objective}}{ Numeric vector of \eqn{L} objective function values (that is the kernel of the log-posterior distribution).}
-#'  \item{\code{call}}{ The matched call.}
-#' 
-#' @references 
-#' Mollica, C. and Tardella, L. (2017). Bayesian Plackett-Luce mixture models for partially ranked data. \emph{Psychometrika}, \bold{82}(2), pages 442--458, ISSN: 0033-3123, DOI: 10.1007/s11336-016-9530-0.
-#' 
-#' @author Cristina Mollica and Luca Tardella
-#' 
+#' @param pi_inv 
+#' @param K 
+#' @param G 
+#' @param init 
+#' @param n_iter 
+#' @param n_burn 
+#' @param hyper 
+#' @param centered_start 
+#'
+#' @return
+#' @export
+>>>>>>> parent of fb273d7... modified gibbsPLMIX_with_norm with sound roxygen documentation
+#'
 #' @examples
-#' 
-#' data(d_carconf)
-#' GIBBS <- gibbsPLMIX_with_norm(pi_inv=d_carconf, K=ncol(d_carconf), G=3, n_iter=30, n_burn=10)
-#' str(GIBBS)
-#' GIBBS$P
-#' GIBBS$W
-#' 
-#' @export 
-
-
 gibbsPLMIX_with_norm <- function(pi_inv,K,G,
                                  init=list(z=NULL,p=NULL),
                                  n_iter=1000,
@@ -119,7 +110,7 @@ gibbsPLMIX_with_norm <- function(pi_inv,K,G,
   
   
   for(l in 1:n_iter){
-    #    print(l)
+#    print(l)
     
     if(l%%500==0){
       print(paste("GIBBS iteration",l))
