@@ -1,3 +1,4 @@
+#'
 #' Gibbs sampling for a Bayesian mixture of Plackett-Luce models
 #' 
 #' Perform Gibbs sampling simulation for a Bayesian mixture of Plackett-Luce models fitted to partial orderings. Differently from the \code{gibbsPLMIX} function it contains a \strong{normalization step} for the support parameters \strong{which should be proven to be equivalent} to the case where the normalization step is skipped and the support parameter space is unidentified up to a proportionality constant.
